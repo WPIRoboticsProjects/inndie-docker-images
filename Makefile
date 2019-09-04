@@ -5,7 +5,7 @@ update:
 	docker pull ubuntu:18.04
 
 build:
-	cd playground && docker build -t wpilib/axon-playground .
+	cd axon-playground && docker build -t wpilib/axon-playground .
 
 push:
 	docker push wpilib/axon-playground
