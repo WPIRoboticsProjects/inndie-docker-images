@@ -12,9 +12,11 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
-RUN pip3 install -e git+https://github.com/onnx/onnx-tensorflow.git#egg=onnx-tf
+# RUN pip3 install -e git+https://github.com/onnx/onnx-tensorflow.git#egg=onnx-tf
 
 WORKDIR /home
+
+COPY tensorflow tensorflow
 
 EXPOSE 8888
 
