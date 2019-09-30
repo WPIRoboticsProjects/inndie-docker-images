@@ -1,0 +1,22 @@
+{
+    "productName": "ui-vaadin",
+    "servletContainer": {
+        "id": "jetty9.4",
+        "version": "9.4.15.v20190215",
+        "description": "Jetty 9.4.15.v20190215"
+    },
+    "serverConfig": {
+        "host": "0.0.0.0",
+        "httpPort": 8080,
+        "jvmArgs": [
+            "-Dvaadin.productionMode=false",
+            "-Dvaadin.bowerMode=true"
+        ]
+    },
+    "webApps": [
+        {
+            "contextPath": "/axon",
+            "resourceBase": "webapps/ui-vaadin-0.1.0.jar"
+        }
+    ]
+}
