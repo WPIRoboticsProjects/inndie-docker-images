@@ -20,4 +20,4 @@ COPY tensorflow tensorflow
 COPY vaadin vaadin
 
 EXPOSE 8080
-CMD vaadin/run.sh
+CMD vaadin/start.sh
