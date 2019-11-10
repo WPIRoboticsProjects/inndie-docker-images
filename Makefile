@@ -12,7 +12,7 @@ build:
 push:
 	docker push wpilib/axon-playground
 	docker push wpilib/axon-hosted
-	docker push wpilib/axon-co
+	docker push wpilib/axon-ci
 
 clean:
 	docker rmi wpilib/axon-playground
