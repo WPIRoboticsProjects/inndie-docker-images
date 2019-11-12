@@ -17,5 +17,3 @@ RUN pip3 install https://github.com/wpilibsuite/axon-cli/releases/download/v0.1.
 WORKDIR /home
 
 COPY tensorflow tensorflow
-
-ENTRYPOINT ["python3.6"]
