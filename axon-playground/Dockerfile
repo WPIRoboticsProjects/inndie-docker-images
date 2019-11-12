@@ -18,6 +18,9 @@ WORKDIR /home
 
 COPY tensorflow tensorflow
 
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
 EXPOSE 8888
 
 CMD ["jupyter", "notebook", "--allow-root", "--port=8888", "--ip=0.0.0.0", "--no-browser"]

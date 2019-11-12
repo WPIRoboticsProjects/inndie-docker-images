@@ -20,5 +20,8 @@ WORKDIR /home
 COPY tensorflow tensorflow
 COPY vaadin vaadin
 
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
 EXPOSE 8080
 CMD vaadin/start.sh
