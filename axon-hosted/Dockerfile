@@ -6,7 +6,7 @@ RUN apt-get update && \
 	libcurl4-openssl-dev \
 	libssl-dev wget \
 	python3.6 python3-pip \
-	python3-dev git \
+	python3-dev git git-lfs \
 	openjdk-11-jre
 RUN pip3 install --upgrade pip
 
