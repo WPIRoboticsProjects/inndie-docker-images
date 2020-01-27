@@ -6,7 +6,9 @@ RUN apt-get update && \
 	libcurl4-openssl-dev \
 	libssl-dev wget \
 	python3.6 python3-pip \
-	python3-dev git
+	python3-dev git \
+	sudo curl fakeroot && \
+	rm -rf /var/lib/apt/lists/*
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt requirements.txt
@@ -20,5 +22,3 @@ COPY tensorflow tensorflow
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-
-ENTRYPOINT ["/bin/sh", "-c"]
