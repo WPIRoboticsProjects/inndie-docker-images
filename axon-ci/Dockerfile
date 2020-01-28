@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
+
 ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && \
 	apt-get install -y sudo \
 	build-essential curl \
@@ -7,6 +9,11 @@ RUN apt-get update && \
 	libssl-dev wget \
 	python3.6 python3-pip \
 	python3-dev git
+
+RUN apt-get install -y sudo curl fakeroot
+RUN apt-get install -y openjdk-11-jdk-headless
+RUN rm -rf /var/lib/apt/lists/*
+
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt requirements.txt
@@ -20,5 +27,4 @@ COPY tensorflow tensorflow
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-
-ENTRYPOINT ["/bin/sh", "-c"]
+ENV JAVA_HOME_11_X64=/usr/lib/jvm/java-11-openjdk-amd64
