@@ -15,7 +15,7 @@
     },
     "webApps": [
         {
-            "contextPath": "/axon",
+            "contextPath": "/",
             "resourceBase": "webapps/ui-vaadin-0.1.0.jar"
         }
     ]
