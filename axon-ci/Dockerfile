@@ -8,10 +8,8 @@ RUN apt-get update && \
 	libcurl4-openssl-dev \
 	libssl-dev wget \
 	python3.6 python3-pip \
-	python3-dev git
-
-RUN apt-get install -y sudo curl fakeroot
-RUN apt-get install -y openjdk-11-jdk-headless
+	python3-dev git sudo \
+	curl fakeroot openjdk-11-jdk-headless
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip

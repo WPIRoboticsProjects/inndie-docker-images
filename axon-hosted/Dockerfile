@@ -8,6 +8,8 @@ RUN apt-get update && \
 	python3.6 python3-pip \
 	python3-dev git git-lfs \
 	openjdk-11-jre
+RUN rm -rf /var/lib/apt/lists/*
+
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt requirements.txt
