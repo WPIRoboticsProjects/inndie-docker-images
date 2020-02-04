@@ -15,7 +15,7 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-RUN pip3 install https://github.com/wpilibsuite/axon-cli/releases/download/v0.1.14/axon-0.1.14-py2.py3-none-any.whl
+RUN pip3 install https://github.com/wpilibsuite/axon-cli/releases/download/v0.1.15/axon-0.1.15-py2.py3-none-any.whl
 
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list && \
