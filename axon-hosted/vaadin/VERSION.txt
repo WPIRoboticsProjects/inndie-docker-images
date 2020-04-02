@@ -1,3 +1,0 @@
-Product: ui-vaadin
-Version: 0.1.0
-Created: Wed Jan 22 21:47:13 EST 2020

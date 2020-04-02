@@ -4,17 +4,18 @@ usage:
 update:
 	docker pull ubuntu:18.04
 
-build:
-	cd axon-playground && docker build -t wpilib/axon-playground . && cd ..
-	cd axon-hosted && docker build -t wpilib/axon-hosted . && cd ..
+build: ci playground
+
+ci:
 	cd axon-ci && docker build -t wpilib/axon-ci . && cd ..
+
+playground:
+	cd axon-playground && docker build -t wpilib/axon-playground . && cd ..
 
 push:
 	docker push wpilib/axon-playground
-	docker push wpilib/axon-hosted
 	docker push wpilib/axon-ci
 
 clean:
 	docker rmi wpilib/axon-playground
-	docker rmi wpilib/axon-hosted
 	docker rmi wpilib/axon-ci
