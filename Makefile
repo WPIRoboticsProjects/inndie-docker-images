@@ -7,15 +7,14 @@ update:
 build: ci playground
 
 ci:
-	cd axon-ci && docker build -t wpilib/axon-ci . && cd ..
+	cd inndie-ci && docker build -t wpilib/inndie-ci . && cd ..
 
 playground:
-	cd axon-playground && docker build -t wpilib/axon-playground . && cd ..
+	cd inndie-playground && docker build -t inndie-playground . && cd ..
 
 push:
-	docker push wpilib/axon-playground
-	docker push wpilib/axon-ci
+	docker push wpilib/inndie-ci
 
 clean:
-	docker rmi wpilib/axon-playground
-	docker rmi wpilib/axon-ci
+	docker rmi inndie-playground
+	docker rmi wpilib/inndie-ci
