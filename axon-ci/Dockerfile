@@ -14,7 +14,8 @@ RUN apt-get update && \
 	git \
 	python3.6 \
 	python3-pip \
-	python3-dev
+	python3-dev \
+	python3-tk
 
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list
