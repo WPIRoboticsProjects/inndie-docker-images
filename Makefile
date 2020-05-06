@@ -7,10 +7,10 @@ update:
 build: ci playground
 
 ci:
-	cd inndie-ci && docker build -t wpilib/inndie-ci . && cd ..
+	cd inndie-ci && cp -f ../requirements.txt requirements.txt && docker build -t wpilib/inndie-ci . && cd ..
 
 playground:
-	cd inndie-playground && docker build -t inndie-playground . && cd ..
+	cd inndie-playground && cp -f ../requirements.txt requirements.txt && docker build -t inndie-playground . && cd ..
 
 push:
 	docker push wpilib/inndie-ci
